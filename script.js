@@ -27,55 +27,64 @@
 
 //les4
 
-const last = (array) => {
-    for (let i = 0; i < array.length; i++) {
-        return array[array.length-1];  
-    }
-}
- console.log(last([1,2,6,8,9]));
+// const last = (array) => {
+//     for (let i = 0; i < array.length; i++) {
+//         return array[array.length-1];  
+//     }
+// }
+//  console.log(last([1,2,6,8,9]));
   
-const includes = (array,value) => {
-    for (let i = 0; i < array.length; i++) {
-        if(array[i]===value){
-            return true;
-        }
-    }
-}
-console.log(includes(['a','b','c','d','e'],'b'));
+// const includes = (array,value) => {
+//     for (let i = 0; i < array.length; i++) {
+//         if(array[i]===value){
+//             return true;
+//         }
+//     }
+// }
+// console.log(includes(['a','b','c','d','e'],'b'));
   
-const pop1 = (array) => {
-    let res = [];
-      for (let index = 0; index < array.length-1; index++) {
-        res[index] = array[index]
-      } return res;
-}
-console.log(pop1([1,2,6,8,9]));
+// const pop1 = (array) => {
+//     let res = [];
+//       for (let index = 0; index < array.length-1; index++) {
+//         res[index] = array[index]
+//       } return res;
+// }
+// console.log(pop1([1,2,6,8,9]));
 
-const pop2 = (array) => {
-    for (let index = 0; index < array.length; index++) {
-        array.reverse();
-        array.shift()
-        array.reverse();
-        return array
-    } 
-}
-console.log(pop2([1,2,6,8,9]));
+// const pop2 = (array) => {
+//     for (let index = 0; index < array.length; index++) {
+//         array.reverse();
+//         array.shift()
+//         array.reverse();
+//         return array
+//     } 
+// }
+// console.log(pop2([1,2,6,8,9]));
 
 
-const shift = (array) => {
-    for (let index = 0; index < array.length; index++) {
-        array.reverse();
-        array.pop()
-        array.reverse();
-        return array
-    } 
-}
-console.log(shift([1,2,6,8,9]));
+// const shift = (array) => {
+//     for (let index = 0; index < array.length; index++) {
+//         array.reverse();
+//         array.pop()
+//         array.reverse();
+//         return array
+//     } 
+// }
+// console.log(shift([1,2,6,8,9]));
 
-const join = (array, separator = '') => {
-    let res = '';
-    for (let i = 0; i < array.length; i++) {
-        res += array[i] + separator;        
-    } return res;
+// const join = (array, separator = '') => {
+//     let res = '';
+//     for (let i = 0; i < array.length; i++) {
+//         res += array[i] + separator;        
+//     } return res;
+// }
+// console.log(join([1,2,6,8,9], '.--.'));
+
+
+// lesson 7
+
+const treeSum = (array) => {   
+    return array.reduce((acc, current) => acc += (Array.isArray(current) ? treeSum(current) : current), 0);     
 }
-console.log(join([1,2,6,8,9], '.--.'));
+
+console.log(treeSum([ 5, 7, [ 4, [2], 8, [1,3], 2 ], [ 9, [] ], 1, 8 ]));
