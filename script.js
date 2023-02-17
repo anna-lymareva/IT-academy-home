@@ -1,29 +1,30 @@
-// "use strict";
 
-// // 1
-// for(let i = "#"; i.length < 7; i += "#") {
-//     console.log(i);
-// }
+"use strict";
 
-// // 2
-// let board = "";
-// for(let i = 0; i < 8; i++) {
-//     for(let j = 0; j < 8; j++){
-//         if ((i + j) % 2 == 0) {
-//             board += " ";
-//         } else {
-//             board += "#";
-//         }        
-//     }
-//     board += "\n";
-// }
-//  console.log(board);
+// 1
+for(let i = "#"; i.length < 7; i += "#") {
+    console.log(i);
+}
 
-// // 3
-// let num = 0;
-// do {
-//     num  = prompt("Введите число больше 100")
-// } while (num < 100 && num);
+// 2
+let board = "";
+for(let i = 0; i < 8; i++) {
+    for(let j = 0; j < 8; j++){
+        if ((i + j) % 2 == 0) {
+            board += " ";
+        } else {
+            board += "#";
+        }        
+    }
+    board += "\n";
+}
+ console.log(board);
+
+// 3
+let num = 0;
+do {
+    num  = prompt("Введите число больше 100")
+} while (num < 100 && num);
 
 //les4
 
@@ -79,3 +80,30 @@ const join = (array, separator = '') => {
     } return res;
 }
 console.log(join([1,2,6,8,9], '.--.'));
+
+
+// 1
+for(let i = "#"; i.length < 7; i += "#") {
+    console.log(i);
+}
+
+// 2
+let boardd = "";
+for(let i = 0; i < 8; i++) {
+    for(let j = 0; j < 8; j++){
+        if ((i + j) % 2 == 0) {
+            boardd += " ";
+        } else {
+            boardd += "#";
+        }        
+    }
+    boardd += "\n";
+}
+ console.log(boardd);
+
+// 3
+let numm = 0;
+do {
+    numm  = prompt("Введите число больше 100")
+} while (numm< 100 && numm);
+
