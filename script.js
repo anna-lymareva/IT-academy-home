@@ -6,7 +6,7 @@
 const treeSum = (array) => {   
     return array.reduce((acc, current) => acc += (Array.isArray(current) ? treeSum(current) : current), 0);     
 
-
+}
 console.log(treeSum([ 5, 7, [ 4, [2], 8, [1,3], 2 ], [ 9, [] ], 1, 8 ]));
 
 // 1
